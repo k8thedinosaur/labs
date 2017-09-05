@@ -41,8 +41,8 @@ def convert_line(line):
     line = line.lower()
     # separate words by spaces
     word_list = line.split(" ")
-    # remove punctuation and replace words
 
+    # remove punctuation and replace words
     for i in range(len(word_list)):
         word_list[i] = word_list[i].strip(string.punctuation)
     return word_list
@@ -55,7 +55,7 @@ file_name = "sherlock.txt"
 with open(file_name, "r") as file:
     # add lines to word_list
     for line in file:
-        # run convert_line function on file to create word list
+        # run convert_line function on file to create word_list
         word_list = convert_line(line)
 
         for word in word_list:
