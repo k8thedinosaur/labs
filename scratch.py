@@ -15,12 +15,16 @@
 #     del word_freq[delim]
 # return freq.most_common()
 
-import nltk
-from nltk.corpus import stopwords
-from nltk.corpus import stopwords
-set(stopwords.words('english'))
+# import nltk
+# from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
+# set(stopwords.words('english'))
+#
+# txt="things and stuff and whatever"
+# print filter(lambda w: not w in s,txt.split())
+#
+#
+temp = float(input("thingy: "))
+ans = temp * 9/5 - 459.67
 
-txt="things and stuff and whatever"
-print filter(lambda w: not w in s,txt.split())
-
-
+print(ans)
