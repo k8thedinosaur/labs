@@ -23,8 +23,3 @@
 # txt="things and stuff and whatever"
 # print filter(lambda w: not w in s,txt.split())
 #
-#
-temp = float(input("thingy: "))
-ans = temp * 9/5 - 459.67
-
-print(ans)
