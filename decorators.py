@@ -48,7 +48,7 @@ import time
 
 # start counting time before function runs
 timer_zero = time.clock()
-
+# print(timer_zero)
 
 # function must take longer than zero nothingths of a second to process >:[
 def make_html_p(function, *args, **kwargs):
@@ -67,7 +67,7 @@ def print_other(stuff):
 print(print_body('this is a message'))
 print(print_other('this is another message'))
 
-
+# print(time.clock())
 print(time.clock() - timer_zero, "seconds process time")
 
 

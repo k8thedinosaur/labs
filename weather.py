@@ -15,7 +15,6 @@ package = {
 
 # K to F conversion
 def k_to_f(temp):
-    # temp = float(input("thingy: "))
     ans = temp * 9/5 - 459.67
     ans = int(ans)
     return ans
@@ -54,7 +53,7 @@ def get_weather():
         else:
             print("It is {} degrees K in {}.".format(int(temp), area))
 
-    # # if zip ...
+    # if zip ...
     elif city_zip == "zip":
         zipcode = input("Enter your zipcode: ")
         package["zip"] = zipcode

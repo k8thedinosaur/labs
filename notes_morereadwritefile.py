@@ -1,4 +1,4 @@
-from labs.pig import pig_latin
+from labs.needswork_pig import pig_latin
 
 
 def read_file(file_path):

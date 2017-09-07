@@ -6,42 +6,41 @@
 
 
 # testing version
-def camel_snake():
-    while True:
-        word = input("What word would you like to check? ")
-        under = "_"
-        first_letter = word[0]
-        if first_letter.upper() in word:
-            if under not in word:
-                print("{} is CamelCase!".format(word))
-            else:
-                print("{} is neither snake_case nor CamelCase.".format(word))
-        elif under in word:
-            if first_letter.lower():
-                print("{} is snake_case!".format(word))
-            elif first_letter.upper():
-                print("{} is neither snake_case nor CamelCase.".format(word))
+# def camel_snake():
+#     while True:
+#         word = input("What word would you like to check? ")
+#         under = "_"
+#         first_letter = word[0]
+#         if first_letter.upper() in word:
+#             if under not in word:
+#                 print("{} is CamelCase!".format(word))
+#             else:
+#                 print("{} is neither snake_case nor CamelCase.".format(word))
+#         elif under in word:
+#             if first_letter.lower():
+#                 print("{} is snake_case!".format(word))
+#             elif first_letter.upper():
+#                 print("{} is neither snake_case nor CamelCase.".format(word))
+#
+#
+#
+# camel_snake()
 
-
-
-camel_snake()
 
 # useful version
-# word = input("What word would you like to check? ")
-#
 def camel_snake(word):
     under = "_"
     first_letter = word[0]
-      if first_letter.upper() in word:
+    if first_letter.upper() in word:
         if under not in word:
             return "{} is CamelCase!".format(word)
         else:
-            return "{} is neither snake_case nor CamelCase.".format(word)
-        elif under in word:
-    if first_letter.lower():
-        return "{} is snake_case!".format(word)
-    elif first_letter.upper():
-        return "{} is neither snake_case nor CamelCase.".format(word)
+            return "{} is incorrectly formatted. You made a Camel_snake!".format(word)
+
+    elif under in word:
+        if first_letter.lower():
+            return "{} is snake_case!".format(word)
+        elif first_letter.upper():
+            return "{} is incorrectly formatted. You made a Camel_snake!".format(word)
         else:
-            return "{} is neither snake_case nor CamelCase.".format(word)
-camel_snake(word)
+            return "{} is incorrectly formatted. You made a Camel_snake!".format(word)

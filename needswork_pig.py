@@ -26,17 +26,17 @@
 
 
 # What I did:
-# vow = 'aeiou'
-# word = input("Give me a word and I'll say it in Pig Latin!: ")
-# # if word[0] in vow:
+vow = 'aeiou'
+word = input("Give me a word and I'll say it in Pig Latin!: ")
 # if word[0] in vow:
-#     word += "yay"
-# else:
-#     word = word[1:] + word[0] + "ay"
-# print(word.capitalize())
+if word[0] in vow:
+    word += "yay"
+else:
+    word = word[1:] + word[0] + "ay"
+print(word.capitalize())
 #
 
-# First class version
+# # First class version
 # word = input("What word would you like translated?: ")
 # first_letter = word[0]
 # left_over = word[1:]
@@ -50,26 +50,29 @@
 #         print("{} in Pig Latin is {}{}ay".format(word, left_over, first_letter))
 
 # Better class version
-def pig_latin(word):
-    vowels = "aeiou"
-    consonant = -1
-    first_letter = ""
-    for letter in word:
-        if letter.lower() in vowels:
-            break
-        else:
-            consonant += 1
-
-    first_letter = word[0:consonant + 1]
-    left_over = word[consonant + 1:]
-
-    if first_letter.lower() in vowels:
-        # print("{} in Pig Latin is {}yay".format(word).capitalize())
-        return "{}yay".format(word.capitalize())
-    else:
-        if first_letter[0].isupper():
-            # print("{} in Pig Latin is {}{}ay".format(word, left_over.capitalize(), first_letter.lower()))
-            return "{}{}ay".format(word, left_over.capitalize(), first_letter.lower())
-        else:
-            # print("{} in Pig Latin is {}{}ay".format(word, left_over, first_letter))
-            return "{}{}ay".format(word, left_over.capitalize(), first_letter.lower())
+# word = input("Thingy: ")
+# def pig_latin(word):
+#     vowels = "aeiou"
+#     consonant = -1
+#     first_letter = ""
+#     for letter in word:
+#         if letter.lower() in vowels:
+#             break
+#         else:
+#             consonant += 1
+#
+#     first_letter = word[0:consonant + 1]
+#     left_over = word[consonant + 1:]
+#
+#     if first_letter.lower() in vowels:
+#         # print("{} in Pig Latin is {}yay".format(word).capitalize())
+#         return "{}yay".format(word.capitalize())
+#     else:
+#         if first_letter[0].isupper():
+#             # print("{} in Pig Latin is {}{}ay".format(word, left_over.capitalize(), first_letter.lower()))
+#             return "{}{}ay".format(word, left_over.capitalize(), first_letter.lower())
+#         else:
+#             # print("{} in Pig Latin is {}{}ay".format(word, left_over, first_letter))
+#             return "{}{}ay".format(word, left_over.capitalize(), first_letter.lower())
+#
+# print(pig_latin(word))

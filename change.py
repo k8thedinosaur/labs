@@ -32,30 +32,29 @@
 #
 
 def coin_return():
-    while True:
-        user = float(input("Enter the amount of change you expect to receive: $"))
-        cents = user * 100
-        cents = int(cents)
+    user = float(input("Enter the amount of change you expect to receive: $"))
+    cents = user * 100
+    cents = int(cents)
 
-        dollars = 0
-        quarters = 0
-        dimes = 0
-        nickels = 0
-        pennies = 0
+    dollars = 0
+    quarters = 0
+    dimes = 0
+    nickels = 0
+    pennies = 0
 
-        if cents >= 100:
-            dollars = cents // 100
-            cents = cents % 100
-        if cents >= 25:
-            quarters = cents // 25
-            cents = cents % 25
-        if cents >= 10:
-            dimes = cents // 10
-            cents = cents % 10
-        if cents >= 5:
-            nickels = cents // 5
-            cents = cents % 5
-        else:
-            pennies += cents
-        print("You will receive {} dollars, {} quarters, {} dimes, {} nickels, and {} pennies.".format(dollars, quarters, dimes, nickels, cents))
+    if cents >= 100:
+        dollars = cents // 100
+        cents = cents % 100
+    if cents >= 25:
+        quarters = cents // 25
+        cents = cents % 25
+    if cents >= 10:
+        dimes = cents // 10
+        cents = cents % 10
+    if cents >= 5:
+        nickels = cents // 5
+        cents = cents % 5
+    else:
+        pennies += cents
+    print("You will receive {} dollars, {} quarters, {} dimes, {} nickels, and {} pennies.".format(dollars, quarters, dimes, nickels, cents))
 coin_return()

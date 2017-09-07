@@ -12,29 +12,29 @@
 ## - string lookup with `in`
 
 # testing version
-def i_before_e():
-    word = input("What word would you like to check? ")
-    while True:
-        i_e = "ie"
-        c_i_e = "cie"
-        if c_i_e in word:
-            print("{} has i before e after c! You've broken language!".format(word))
-        elif i_e in word:
-            print("{} has i before e but no c.".format(word))
-        else:
-            print("{} does not contain i before e.".format(word))
-i_before_e()
+# def i_before_e():
+#     word = input("What word would you like to check? ")
+#     while True:
+#         i_e = "ie"
+#         c_i_e = "cie"
+#         if c_i_e in word:
+#             print("{} has i before e after c! You've broken language!".format(word))
+#         elif i_e in word:
+#             print("{} has i before e but no c.".format(word))
+#         else:
+#             print("{} does not contain i before e.".format(word))
+# i_before_e()
 
 # useful version
-# word = input("What word would you like to check? ")
-#
-# def i_before_e(word):
-#     i_e = "ie"
-#     c_i_e = "cie"
-#     if c_i_e in word:
-#         return "{} has i before e after c! You've broken language!".format(word)
-#     elif i_e in word:
-#         return "{} has i before e but no c.".format(word)
-#     else:
-#         return "{} does not contain i before e.".format(word)
-# i_before_e(word)
+word = input("What word would you like to check? ")
+
+def i_before_e(word):
+    i_e = "ie"
+    c_i_e = "cie"
+    if c_i_e in word:
+        return "{} has i before e after c! You've broken language!".format(word)
+    elif i_e in word:
+        return "{} has i before e but no c.".format(word)
+    else:
+        return "{} does not contain i before e.".format(word)
+print(i_before_e(word))
