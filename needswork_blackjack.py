@@ -23,6 +23,30 @@
 # *   Allow multiple hands to be played with the same deck.
 
 
+# class Card:
+#     def __init__(self, suit):
+#         self.suit = suit
+#
+#     def print_value(self):
+#         print(self.suit)
+#
+#     def __str__(self):
+#         return self.suit
+#
+#     def __repr__(self):
+#         return self.__str__()
+#
+#
+# card1 = Card("Hearts")
+#
+# print([card1])
+# card1.print_value()
+
+# class BalanceRequestMixin:
+#     def get_balance(self):
+#         return "Your balance is {}.".format(self.balance)
+
+
 import random
 
 # `Card` class with a suit and a rank
@@ -52,12 +76,16 @@ class Card:
 
 # `Deck` class with a collection of cards
 class Deck(Card):
-    def __init__(self,):
+    def __init__(self):
         self.deck
 
 
     def shuffle(self):
         random.shuffle(self.deck)
+
+new_deck = Deck
+
+print(new_deck)
 
 
 #
@@ -87,3 +115,12 @@ class Deck(Card):
 # # * Score a hand
 # * Bust if the score is over 21
 # * Holds players and dealer
+
+
+
+class Hand:
+    def __init__(self):
+        self.hand = []
+
+    def hit(self, card):
+        hand.append(card)

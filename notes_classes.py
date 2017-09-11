@@ -1,70 +1,43 @@
-# class Card:
-#     def __init__(self, suit):
-#         self.suit = suit
-#
-#     def print_value(self):
-#         print(self.suit)
-#
-#     def __str__(self):
-#         return self.suit
-#
-#     def __repr__(self):
-#         return self.__str__()
 #
 #
-# card1 = Card("Hearts")
+# class Foo:
+#     def __init__(self, name):
+#         self.name = name
 #
-# print([card1])
-# card1.print_value()
+# lst = []
+#
+# for i in range(100):
+#     lst.append(Foo(i))
+#
+#
+# for x in lst:
+#     print(x.name)
 
-class BalanceRequestMixin:
-    def get_balance(self):
-        return "Your balance is {}.".format(self.balance)
+# # comprehension
+# lst = []
+# for i in range(1, 21):
+#     lst.append(i)
+# print(lst)
+#
+# lst2 = [i for i in range(1, 21)]
+# print(lst2)
+#
+# dict = {i:i+1 for i in range(1, 21)}
+# print(dict)
 
+# recursion: a function that calls itself until a condition is met
+# def easy_rec(n):
+#     if n > 100:
+#         return n
+#     else:
+#         return n + easy_rec(n + 1)
+#
+# print(easy_rec(1))
+#
+# def fib(n):
+#     if n < 2:
+#         return n
+#     return fib(n-2) + fib(n-1)
+#
+# print([fib(f) for f in range(35)])
 
-class BankAccount(BalanceRequestMixin):
-    def __init__(self, f_name, l_name, balance=0):
-        self.f_name = f_name
-        self.l_name = l_name
-        self.full_name = self.f_name + " " + self.l_name
-        self.balance = balance
-        self.setup()
-
-    def deposit(self, amount):
-        self.balance += amount
-        print("You have deposited {}. Your new balance is {}.".format(amount, self.balance))
-
-    def withdraw(self, amount):
-        if self.balance - amount >= 0:
-            self.balance -= amount
-            print("You have withdrawn {}. Your new balance is {}.".format(amount, self.balance))
-        else:
-            print("Insufficient funds.")
-
-    def setup(self):
-        print("You have created an account for {}".format(self.full_name))
-
-    def __str__(self):
-        return "Account of {}.".format(self.full_name)
-
-    def __repr__(self):
-        return self.__str__()
-
-class AltBankAccount(BankAccount, BalanceRequestMixin):
-    def withdraw(self, amount, cancel=False):
-        if cancel:
-            return super().withdraw(amount)
-        elif self.balance - amount - 200 >= 0:
-            self.balance -= amount
-            print("You have withdrawn {}. Your new balance is {}.".format(amount, self.balance))
-        else:
-            print("Insufficient funds. >:[")
-
-
-account1 = BankAccount("Kate", "Cat", 60)
-account2 = AltBankAccount("Murray", "Cat", 5000)
-
-print(account1.balance)
-print(account2.balance)
-
-# account2.withdraw(5000, True)
