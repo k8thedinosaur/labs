@@ -13,13 +13,14 @@ phonebook = {
 }
 
 
+def pretty_phone(add_number):
+    map(int, add_number)
+    part1 = add_number[0:3]
+    part2 = add_number[3:6]
+    part3 = add_number[6:10]
+    return "({}) {}-{}".format(part1, part2, part3)
+
 def catbook():
-    def pretty_phone(add_number):
-        map(int, add_number)
-        part1 = add_number[0:3]
-        part2 = add_number[3:6]
-        part3 = add_number[6:10]
-        print("({}) {}-{}".format(part1, part2, part3))
     while True:
         print("Welcome to the CatBook. What would you like to do? \n\
         0 - Display contacts \n\
@@ -48,8 +49,8 @@ def catbook():
             add_name = input("What is the nickname of the cat you would like to add? ")
             full_name = input("What is the cat's full name? ")
             add_number = input("What is the cat's number? ")
-            pretty_phone(add_number)
             phonebook[add_name] = dict(Name=full_name, Phone=add_number)
+            pretty_phone(add_number)
             print("{0} was added to the CatBook as {1} with the number: {2}".format(add_name, full_name, add_number))
 
         # *** 3. Change Entry

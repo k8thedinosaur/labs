@@ -21,31 +21,32 @@ from random import randrange
 
 
 # testing version
-# def dice_roll():
-#     while True:
-#         # ask for number of dice
-#         dice = int(input("How many dice would you like to roll? "))
-#         # ask for number of sides
-#         sides = int(input("How many sides do the dice have? "))
-#
-#
-#         # for loop to roll
-#         for i in range(dice):
-#             i + 1
-#             answer = randrange(1, sides)
-#             print(str(answer))
-#
-# dice_roll()
-
-# useful version
-dice = int(input("How many dice would you like to roll? "))
-sides = int(input("How many sides do the dice have? "))
-
 def dice_roll():
-    # for loop to roll
-    for i in range(dice):
-        i + 1
-        answer = randrange(1, sides)
-        return (str(answer))
+    while True:
+        # ask for number of dice
+        dice = int(input("How many dice would you like to roll? "))
+        # ask for number of sides
+        sides = int(input("How many sides do the dice have? "))
+
+
+        # for loop to roll
+        for i in range(dice):
+            answer = randrange(1, sides)
+            print(str(answer))
 
 dice_roll()
+
+
+
+# useful version
+# dice = int(input("How many dice would you like to roll? "))
+# sides = int(input("How many sides do the dice have? "))
+#
+# def dice_roll():
+#     # for loop to roll
+#     for i in range(dice):
+#         i + 1
+#         answer = randrange(1, sides)
+#         return (str(answer))
+#
+# dice_roll()

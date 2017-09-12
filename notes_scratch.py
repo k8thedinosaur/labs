@@ -1,8 +1,21 @@
-# # def add_things(*kwargs):
-# #     print(kwargs)
-# #
-# # add_things({"I like pie": True})
-#
+
+from needswork_adventure import AnHero, BadGuy, Weapon, Restorative
+
+from random import randint
+
+
+def escape():
+    # randint to see if your escape is successful
+    escape = randint(0, 3)
+    print(escape)
+    if escape >= 3:
+        print("Your escape is successful!")
+    else:
+        print("Escape unsuccessful!")
+
+escape()
+
+
 # from nltk.corpus import stopwords
 # s=set(stopwords.words('english'))
 #
@@ -60,3 +73,4 @@
 # import random
 #
 # random.shuffle(deck)  # shuffle works using no extra code
+
