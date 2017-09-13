@@ -56,11 +56,19 @@
 
 
 
+#
+# class Attributes:
+#     def __init__(self, inventory):
+#         self.inventory = []
+
+
 class AnHero:
     def __init__(self, name):
         self.name = name
         self.health = 25
+        self.magic = 10
         self.weapon = Weapon("Crappy Dagger", 3, "inventory")
+        self.inventory = ([])
 
     def __str__(self):
         return self.name
@@ -70,7 +78,9 @@ class BadGuy:
     def __init__(self, name):
         self.name = name
         self.health = 20
+        self.magic = 0
         self.weapon = Weapon("Crappy Dagger", 3, "inventory")
+        self.inventory = ([])
 
     def __str__(self):
         return self.name
@@ -86,6 +96,13 @@ class Weapon:
         return self.name
 
 
+class Spell:
+    def __init__(self, name, power, cost):
+        self.name = name
+        self.cost = cost
+        self.power = power
+
+
 class Restorative:
     def __init__(self, name, restore):
         self.name = name
@@ -93,4 +110,5 @@ class Restorative:
 
     def __str__(self):
         return self.name
+
 
