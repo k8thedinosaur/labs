@@ -60,11 +60,14 @@ def escape_attempt():
         exit()
     # if unsuccessful:
     else:
-        # print(diversions)
-        print(random.choice(diversions))
-        diversions.pop()
-        # print(diversions)
-        print("Escape unsuccessful!")
+        if not diversions:
+            print("No diversion tactics left!")
+        else:
+            # print(diversions)
+            print(random.choice(diversions))
+            diversions.pop()
+            # print(diversions)
+            print("Escape unsuccessful!")
     health_below_zero()
 
 
