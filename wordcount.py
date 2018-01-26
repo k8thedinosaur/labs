@@ -83,7 +83,7 @@ for i in range(len(words)):
     print(words[i])
 
 # Optional: Remove stopwords
-# notes (none of these actually work, idk why)
+# notes (none of these actually work, chuck why)
 
 # from nltk.corpus import stopwords
 # s=set(stopwords.words('english'))

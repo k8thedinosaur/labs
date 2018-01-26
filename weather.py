@@ -13,16 +13,19 @@ package = {
     "APPID": "848e9a71a4b1c90877841baf319c1b68",
 }
 
+
 # K to F conversion
 def k_to_f(temp):
     ans = temp * 9/5 - 459.67
     ans = int(ans)
     return ans
 
+
 def k_to_c(temp):
     ans = temp - 273.15
     ans = int(ans)
     return ans
+
 
 def get_weather():
     # ask city or zip
@@ -69,4 +72,9 @@ def get_weather():
             print("It is {} degrees K in {}.".format(int(temp), zipcode))
     else:
         print("Invalid response.")
+
+
 get_weather()
+
+
+

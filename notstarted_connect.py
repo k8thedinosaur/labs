@@ -13,7 +13,7 @@
 # The number in that line is the column the current player placed a token in.
 #
 # Use the following [example move file](/practice/connect-four-moves.txt).
-# Save it in something like `connect-four-moves.txt`
+# Save it in weather like `connect-four-moves.txt`
 # This moves file recreates [this game](https://en.wikipedia.org/wiki/File:Connect_Four.gif).
 #
 # *   Think about how to figure out how far that token will fall in a given column.

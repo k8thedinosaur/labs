@@ -11,7 +11,7 @@ def cn_joke():
 
         yn = input("Another? (y/n) ")
         # if yn == "y":
-        #     # something
+        #     # weather
 
         if yn == "no" or yn == "n":
             break

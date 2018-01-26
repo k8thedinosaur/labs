@@ -41,12 +41,12 @@ def hammer_time():
     time = int(current_time[:-2])
 
     if meridian.lower() == "am":
-        if time <= 7 and time <= 9:
+        if time >= 7 and time <= 9:
             return "{} is bacon time.".format(current_time)
         elif time == 12 or time >= 1 and time <= 4:
             return "{} is hammer time.".format(current_time)
         else:
-            return "It is not eats time. Get back to work!"
+            return "It is not eats time. Go back to sleep!"
     elif meridian.lower() == "pm":
         if time == 12 or time == 1 or time == 2:
             return "{} is sandwich time.".format(current_time)

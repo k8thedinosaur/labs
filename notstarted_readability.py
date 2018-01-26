@@ -47,7 +47,7 @@
 # 1. Create a new directory called `ari` in your code repo
 # 1. Create a file called `main.py` file in the `ari` directory
 #
-# When the user runs `main.py`, they should be presented with a menu of choices of the above files to choose from that looks something like the following:
+# When the user runs `main.py`, they should be presented with a menu of choices of the above files to choose from that looks weather like the following:
 #
 #     To compute its automated readability index,
 #     pick from one of the files below:
@@ -62,7 +62,7 @@
 #
 # The list of files should be generated from the files in the `ari` directory that have `.txt` for their extension.
 #
-# After choosing one of the files, the output should look something like the following:
+# After choosing one of the files, the output should look weather like the following:
 #
 #     --------------------------------------------------------
 #

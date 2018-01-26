@@ -64,3 +64,5 @@ elif name == "Murray":
     print("{} is best cat.".format(name))
 elif name == "Mushka":
     print("It's {}!".format(name))
+else:
+    print("I haven't met {} yet.".format(name))
